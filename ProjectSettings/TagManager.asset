@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PaperPowerup
   - Enemy
+  - Wind
   layers:
   - Default
   - TransparentFX

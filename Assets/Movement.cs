@@ -171,4 +171,21 @@ public class Movement : MonoBehaviour {
             Debug.Log("Enemy");
         }
     }
+    private void OnCollisionStay(Collision collision)
+    {
+         
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Wind")
+        {
+            Vector3 dir = other.gameObject.GetComponent<WindScript>().direction;
+            float force = 0;
+            if (dir.x != 0)
+                force = (Mathf.Abs(transform.position.x - other.transform.position.x));
+            if (dir.z != 0)
+                force = (Mathf.Abs(transform.position.z - other.transform.position.z));
+            rb.AddForce(dir * 30/Mathf.Clamp(force, 0.3f, 100));
+        }
+    }
 }
