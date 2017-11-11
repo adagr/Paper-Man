@@ -44,7 +44,7 @@ public class Jump : MonoBehaviour {
     }
     private void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && transform.position.y == height)
             jumping = true;
     }
 }
