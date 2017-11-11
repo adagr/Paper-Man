@@ -15,11 +15,17 @@ public class Movement : MonoBehaviour {
     private int rx = 1, rz = 1, rxa = 1, rza = 1;
     private Clone[] clones;
     private int activeClones = 1;
-	// Use this for initialization
-	void Start () {
+    private CapsuleCollider col;
+    private bool invincible = false;
+    private float invincibleTimer;
+    public float invincibleTime = 2;
+    private float x = 0, z = 0;
+    // Use this for initialization
+    void Start () {
         cc = GetComponent<CharacterController>();
         cs = FindObjectOfType<CollisionScript>();
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<CapsuleCollider>();
         rotationTarget = new Quaternion();
         animators = GetComponentsInChildren<Animator>();
         foreach (Animator animator in animators)
@@ -27,7 +33,9 @@ public class Movement : MonoBehaviour {
         clones = FindObjectsOfType<Clone>();
         foreach (Clone clone in clones)
             clone.gameObject.SetActive(false);
-	}
+        invincibleTimer = invincibleTime;
+
+    }
 
     private void Update()
     {
@@ -63,16 +71,8 @@ public class Movement : MonoBehaviour {
             rxa = 1;
             rza = -1;
         }
-    }
-
-    // Update is called once per frame
-    void FixedUpdate ()
-    {
-
-        
-
-        float x = 0;
-        float z = 0;
+        x = 0;
+        z = 0;
         if (Input.GetKey("s"))
         {
             x += -1 * rx;
@@ -94,17 +94,6 @@ public class Movement : MonoBehaviour {
             z += -1 * rza;
         }
 
-        rb.velocity = new Vector3(x, 0, z) * speed;
-
-        var walk = false;
-        if (x != 0 || z != 0)
-            walk = true;
-        foreach (Animator animator in animators)
-            if (animator.gameObject.activeSelf)
-                animator.SetBool("IsWalking", walk);
-
-        //rb.MovePosition(new Vector3(transform.position.x + Mathf.Clamp(x, -1, 1) * Time.deltaTime * speed, 0.5f, transform.position.z + Mathf.Clamp(z, -1, 1) * Time.deltaTime * speed));
-
         if (cs.canRotate)
         {
             if (Input.GetKeyDown("e"))
@@ -114,38 +103,62 @@ public class Movement : MonoBehaviour {
             rotationTarget.eulerAngles = new Vector3(0, currentRotation, 0);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotationTarget, Time.deltaTime * rotationSpeed);
         }
+
+        var walk = false;
+        if (x != 0 || z != 0)
+            walk = true;
+        foreach (Animator animator in animators)
+            if (animator.gameObject.activeSelf)
+                animator.SetBool("IsWalking", walk);
+
+    }
+
+    // Update is called once per frame
+    void FixedUpdate ()
+    {
+        if (invincible)
+        {
+            invincibleTimer -= Time.fixedDeltaTime;
+            if (invincibleTimer < 0)
+            {
+                invincible = false;
+                invincibleTimer = invincibleTime;
+            }
+        }
+
+        rb.velocity = new Vector3(x, 0, z) * speed;
     }
 
     public void activateClone()
     {
-        ++activeClones;
         foreach (Clone clone in clones)
         {
-            if (activeClones <= clones.Length && clone.name.CompareTo("PaperMan" + activeClones) == 0)
+            if (activeClones+1 <= clones.Length && clone.name.CompareTo("PaperMan" + (activeClones+1)) == 0)
+            {
+                activeClones++;
                 clone.gameObject.SetActive(true);
+                col.radius += 0.02f;
+                break;
+            }
         }
     }
     public void deactivateClone()
     {
+        if (invincible)
+            return;
         foreach (Clone clone in clones)
         {
             if (activeClones > 1 && clone.name.CompareTo("PaperMan" + activeClones) == 0)
+            {
                 clone.gameObject.SetActive(false);
+                col.radius -= 0.02f;
+                activeClones--;
+                invincible = true;
+                break;
+            }
         }
-        activeClones--;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        /*
-        if (other.tag == "PaperPowerup")
-        {
-            Debug.Log("PaperPowerup");
-            activateClone();
-            Destroy(other.gameObject);
-        }
-        */
-    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "PaperPowerup")
