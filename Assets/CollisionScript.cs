@@ -17,7 +17,7 @@ public class CollisionScript : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag != "PaperPowerup")
+        if (other.tag != "PaperPowerup" && other.tag != "Wind")
             canRotate = false;
     }
 
