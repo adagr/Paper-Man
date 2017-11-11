@@ -1,35 +1,37 @@
 fileFormatVersion: 2
-guid: 62caa23b7cf184e4da34d824ec1a622e
-timeCreated: 1510401585
+guid: 3109b8ce04284ce40a53cfca984e75f8
+timeCreated: 1510406060
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: LeftArm
-    100002: LeftLeg
-    100004: //RootNode
-    100006: RightArm
-    100008: RightLeg
-    400000: LeftArm
-    400002: LeftLeg
-    400004: //RootNode
-    400006: RightArm
-    400008: RightLeg
-    2300000: LeftArm
-    2300002: LeftLeg
-    2300004: //RootNode
+    100000: Body
+    100002: LeftArm
+    100004: LeftLeg
+    100006: //RootNode
+    100008: RightArm
+    100010: RightLeg
+    400000: Body
+    400002: LeftArm
+    400004: LeftLeg
+    400006: //RootNode
+    400008: RightArm
+    400010: RightLeg
+    2300000: Body
+    2300002: LeftArm
+    2300004: LeftLeg
     2300006: RightArm
     2300008: RightLeg
-    3300000: LeftArm
-    3300002: LeftLeg
-    3300004: //RootNode
+    3300000: Body
+    3300002: LeftArm
+    3300004: LeftLeg
     3300006: RightArm
     3300008: RightLeg
-    4300000: Body
+    4300000: LeftArm
     4300002: RightArm
-    4300004: LeftArm
-    4300006: RightLeg
-    4300008: LeftLeg
+    4300004: Body
+    4300006: LeftLeg
+    4300008: RightLeg
     7400000: Take 001
     9500000: //RootNode
   externalObjects:
@@ -63,7 +65,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
