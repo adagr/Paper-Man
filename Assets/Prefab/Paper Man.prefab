@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 114103476929078080}
   - component: {fileID: 136644886971965108}
   - component: {fileID: 114548609088712970}
+  - component: {fileID: 81662389425662856}
   m_Layer: 0
   m_Name: Paper Man
   m_TagString: Untagged
@@ -1112,8 +1113,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1177520415150466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0.6, z: 18.788}
-  m_LocalScale: {x: 1, y: 1, z: 0.01}
+  m_LocalPosition: {x: -4.351, y: 2.885, z: -3.42}
+  m_LocalScale: {x: 0.7885782, y: 0.7656217, z: 0.008761981}
   m_Children:
   - {fileID: 4897534468647248}
   - {fileID: 4955011994410272}
@@ -2924,6 +2925,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0.86800885, z: 50}
   m_Center: {x: 0, y: 0.065995574, z: 0}
+--- !u!81 &81662389425662856
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177520415150466}
+  m_Enabled: 0
 --- !u!95 &95014384779699362
 Animator:
   serializedVersion: 3
@@ -3173,6 +3181,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.05
-  m_Height: 1
+  m_Height: 0.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
