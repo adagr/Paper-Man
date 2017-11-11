@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour {
     public float rotationSpeed = 1;
     private CharacterController cc;
     private Quaternion rotationTarget;
-    private int currentRotation = 0, cameraRotation = 0;
+    public int currentRotation = 0, cameraRotation = 0;
     private CollisionScript cs;
     private Rigidbody rb;
     private Animator[] animators;
@@ -179,13 +179,20 @@ public class Movement : MonoBehaviour {
     {
         if (other.tag == "Wind")
         {
+            WindScript wind = other.gameObject.GetComponent<WindScript>();
             Vector3 dir = other.gameObject.GetComponent<WindScript>().direction;
             float force = 0;
             if (dir.x != 0)
-                force = (Mathf.Abs(transform.position.x - other.transform.position.x));
+                if (Mathf.Abs(currentRotation) == 90 || Mathf.Abs(currentRotation) == 270)
+                    force = 100 / Mathf.Clamp((Mathf.Abs(transform.position.x - wind.point.transform.position.x)),1,10);
+                else
+                    force = 20 / Mathf.Clamp((Mathf.Abs(transform.position.x - wind.point.transform.position.x)), 1, 10);
             if (dir.z != 0)
-                force = (Mathf.Abs(transform.position.z - other.transform.position.z));
-            rb.AddForce(dir * 30/Mathf.Clamp(force, 0.3f, 100));
+                if (Mathf.Abs(currentRotation) == 180 || currentRotation == 0)
+                    force = 100 / Mathf.Clamp((Mathf.Abs(transform.position.z - wind.point.transform.position.z)), 1, 10);
+                else
+                    force = 20 / Mathf.Clamp((Mathf.Abs(transform.position.z - wind.point.transform.position.z)), 1, 10);
+            rb.AddForce(dir * force);
         }
     }
 }

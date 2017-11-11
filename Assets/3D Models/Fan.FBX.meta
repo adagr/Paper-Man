@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 888f5155337c4a149bbf86bed07d3f54
-timeCreated: 1510428803
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -25,13 +23,6 @@ ModelImporter:
     4300002: Cylinder001
     4300004: Box001
     4300006: Box002
-<<<<<<< HEAD
-    6400000: Box001
-    6400002: Box002
-    6400004: Cylinder001
-    6400006: //RootNode
-=======
->>>>>>> 4b720475115c5a04e42753e60a93bd06c5e2d211
     7400000: Take 001
     9500000: //RootNode
   externalObjects:
@@ -41,17 +32,10 @@ ModelImporter:
       name: 'Material #110'
     second: {fileID: 2100000, guid: cf469628149d2e34f8d7570d06c8bf3d, type: 2}
   materials:
-<<<<<<< HEAD
-    importMaterials: 0
-    materialName: 0
-    materialSearch: 1
-    materialLocation: 1
-=======
     importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
->>>>>>> 4b720475115c5a04e42753e60a93bd06c5e2d211
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -72,49 +56,13 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-<<<<<<< HEAD
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 0
-      lastFrame: 100
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-=======
     clipAnimations: []
->>>>>>> 4b720475115c5a04e42753e60a93bd06c5e2d211
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-<<<<<<< HEAD
-    addColliders: 1
-=======
     addColliders: 0
->>>>>>> 4b720475115c5a04e42753e60a93bd06c5e2d211
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

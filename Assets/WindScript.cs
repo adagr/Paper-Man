@@ -5,6 +5,7 @@ using UnityEngine;
 public class WindScript : MonoBehaviour {
 
     public Vector3 direction;
+    public Transform point;
 	// Use this for initialization
 	void Start () {
 		
