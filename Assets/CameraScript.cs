@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
 
-    public Movement player;
+    private Movement player;
     private Quaternion fixedRotation;
     private Vector3 distance;
 	// Use this for initialization
@@ -16,6 +16,6 @@ public class CameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = player.transform.position + distance;
+        transform.position = Vector3.Lerp(transform.position, player.transform.position + distance, Time.deltaTime);
 	}
 }
