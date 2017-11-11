@@ -1,16 +1,42 @@
 fileFormatVersion: 2
-guid: 09ab4b48dd16f404e92e3fb0ae216915
-timeCreated: 1510401585
+guid: 34a59abd5b51f3946bea8f3add515d69
+timeCreated: 1510412148
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
+    100000: BOOK_LABEL
+    100002: BOOK_LABEL_3
+    100004: BOOK_LABEL_8
+    100006: //RootNode
+    100008: Box002
+    100010: Box002_40
+    100012: Box002_41
+    400000: BOOK_LABEL
+    400002: BOOK_LABEL_3
+    400004: BOOK_LABEL_8
+    400006: //RootNode
+    400008: Box002
+    400010: Box002_40
+    400012: Box002_41
+    2300000: BOOK_LABEL
+    2300002: BOOK_LABEL_3
+    2300004: BOOK_LABEL_8
+    2300006: Box002
+    2300008: Box002_40
+    2300010: Box002_41
+    3300000: BOOK_LABEL
+    3300002: BOOK_LABEL_3
+    3300004: BOOK_LABEL_8
+    3300006: Box002
+    3300008: Box002_40
+    3300010: Box002_41
     4300000: Box002
-    6400000: //RootNode
+    4300002: BOOK_LABEL
+    4300004: BOOK_LABEL_8
+    4300006: BOOK_LABEL_3
+    4300008: Box002_41
+    4300010: Box002_40
     9500000: //RootNode
   externalObjects:
   - first:
@@ -28,6 +54,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: 'Material #49'
     second: {fileID: 2100000, guid: d013ede07c0498f4e8cd794c3104a611, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: f583bf6cbadf797419b80368ef1ac354, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,7 +90,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
