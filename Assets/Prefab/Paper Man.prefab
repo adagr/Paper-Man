@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 54113948768252834}
   - component: {fileID: 114103476929078080}
   - component: {fileID: 136644886971965108}
+  - component: {fileID: 114548609088712970}
   m_Layer: 0
   m_Name: Paper Man
   m_TagString: Untagged
@@ -1111,7 +1112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1177520415150466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0.51, z: 20}
+  m_LocalPosition: {x: 20, y: 0.6, z: 18.788}
   m_LocalScale: {x: 1, y: 1, z: 0.01}
   m_Children:
   - {fileID: 4897534468647248}
@@ -2909,7 +2910,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65123596225466798
 BoxCollider:
@@ -3065,8 +3066,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ca60bb4bb43d2428beb43fe16ac80c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   rotationSpeed: 15
+  currentRotation: 0
+  cameraRotation: 0
   invincibleTime: 2
 --- !u!114 &114334507431395798
 MonoBehaviour:
@@ -3101,6 +3104,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83cc1c3c8eb80a94382056cf0cdb3d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114548609088712970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177520415150466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7806731ed7484a74c9e497ac7346a089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpPower: 250
+  gravity: 75
+  jumptime: 0.5
 --- !u!114 &114601509405821658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3156,6 +3173,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.05
-  m_Height: 0.5
-  m_Direction: 0
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
