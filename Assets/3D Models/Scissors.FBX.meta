@@ -1,45 +1,33 @@
 fileFormatVersion: 2
-guid: 61ff0ff83c18abd40b142bff7a07d5e3
-timeCreated: 1510406553
+guid: 35983ab00fc0572498111be0f91916c8
+timeCreated: 1510413905
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Body
-    100002: LeftArm
-    100004: LeftLeg
-    100006: //RootNode
-    100008: RightArm
-    100010: RightLeg
-    400000: Body
-    400002: LeftArm
-    400004: LeftLeg
-    400006: //RootNode
-    400008: RightArm
-    400010: RightLeg
-    2300000: Body
-    2300002: LeftArm
-    2300004: LeftLeg
-    2300006: RightArm
-    2300008: RightLeg
-    3300000: Body
-    3300002: LeftArm
-    3300004: LeftLeg
-    3300006: RightArm
-    3300008: RightLeg
-    4300000: LeftArm
-    4300002: RightArm
-    4300004: Body
-    4300006: LeftLeg
-    4300008: RightLeg
+    100000: Box001
+    100002: Box002
+    100004: //RootNode
+    400000: Box001
+    400002: Box002
+    400004: //RootNode
+    2300000: Box001
+    2300002: Box002
+    2300004: //RootNode
+    3300000: Box001
+    3300002: Box002
+    3300004: //RootNode
+    4300000: Cylinder001
+    4300002: Box001
+    4300004: Box002
     7400000: Take 001
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #48'
-    second: {fileID: 2100000, guid: 7e78ab658b9806a43be18c5a4a364ddb, type: 2}
+      name: 'Material #2'
+    second: {fileID: 2100000, guid: 30e619e43da9e9a4792ee279b90e6713, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

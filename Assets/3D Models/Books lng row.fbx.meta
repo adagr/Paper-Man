@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: d24a4e2d10546514dade1312038b4c66
+timeCreated: 1510412704
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BOOK_LABEL
+    100002: BOOK_LABEL_1
+    100004: BOOK_LABEL_2
+    100006: BOOK_LABEL_3
+    100008: BOOK_LABEL_4
+    100010: BOOK_LABEL_5
+    100012: BOOK_LABEL_6
+    100014: BOOK_LABEL_7
+    100016: BOOK_LABEL_9
+    100018: //RootNode
+    100020: Box002
+    100022: Box002_1
+    100024: Box002_2
+    100026: Box002_25
+    100028: Box002_27
+    100030: Box002_29
+    100032: Box002_30
+    100034: Box002_31
+    100036: Box002_32
+    100038: Box002_33
+    100040: Box002_34
+    100042: Box002_36
+    400000: BOOK_LABEL
+    400002: BOOK_LABEL_1
+    400004: BOOK_LABEL_2
+    400006: BOOK_LABEL_3
+    400008: BOOK_LABEL_4
+    400010: BOOK_LABEL_5
+    400012: BOOK_LABEL_6
+    400014: BOOK_LABEL_7
+    400016: BOOK_LABEL_9
+    400018: //RootNode
+    400020: Box002
+    400022: Box002_1
+    400024: Box002_2
+    400026: Box002_25
+    400028: Box002_27
+    400030: Box002_29
+    400032: Box002_30
+    400034: Box002_31
+    400036: Box002_32
+    400038: Box002_33
+    400040: Box002_34
+    400042: Box002_36
+    2300000: BOOK_LABEL
+    2300002: BOOK_LABEL_1
+    2300004: BOOK_LABEL_2
+    2300006: BOOK_LABEL_3
+    2300008: BOOK_LABEL_4
+    2300010: BOOK_LABEL_5
+    2300012: BOOK_LABEL_6
+    2300014: BOOK_LABEL_7
+    2300016: BOOK_LABEL_9
+    2300018: Box002
+    2300020: Box002_1
+    2300022: Box002_2
+    2300024: Box002_25
+    2300026: Box002_27
+    2300028: Box002_29
+    2300030: Box002_30
+    2300032: Box002_31
+    2300034: Box002_32
+    2300036: Box002_33
+    2300038: Box002_34
+    2300040: Box002_36
+    3300000: BOOK_LABEL
+    3300002: BOOK_LABEL_1
+    3300004: BOOK_LABEL_2
+    3300006: BOOK_LABEL_3
+    3300008: BOOK_LABEL_4
+    3300010: BOOK_LABEL_5
+    3300012: BOOK_LABEL_6
+    3300014: BOOK_LABEL_7
+    3300016: BOOK_LABEL_9
+    3300018: Box002
+    3300020: Box002_1
+    3300022: Box002_2
+    3300024: Box002_25
+    3300026: Box002_27
+    3300028: Box002_29
+    3300030: Box002_30
+    3300032: Box002_31
+    3300034: Box002_32
+    3300036: Box002_33
+    3300038: Box002_34
+    3300040: Box002_36
+    4300000: BOOK_LABEL_7
+    4300002: BOOK_LABEL_6
+    4300004: Box002_2
+    4300006: Box002_1
+    4300008: BOOK_LABEL_5
+    4300010: BOOK_LABEL_4
+    4300012: Box002
+    4300014: BOOK_LABEL_3
+    4300016: BOOK_LABEL_9
+    4300018: BOOK_LABEL_2
+    4300020: BOOK_LABEL_1
+    4300022: Box002_36
+    4300024: Box002_34
+    4300026: Box002_33
+    4300028: Box002_32
+    4300030: Box002_31
+    4300032: Box002_30
+    4300034: Box002_29
+    4300036: Box002_27
+    4300038: BOOK_LABEL
+    4300040: Box002_25
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: 69c1e7805cc5edd4ab96199b89be28b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: 6cc403c2c57038340b136da0250ac755, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #37'
+    second: {fileID: 2100000, guid: 7c81e6f0744b35043ad8ddfa60c60f6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #49'
+    second: {fileID: 2100000, guid: d013ede07c0498f4e8cd794c3104a611, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: f583bf6cbadf797419b80368ef1ac354, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
