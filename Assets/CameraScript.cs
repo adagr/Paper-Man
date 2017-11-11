@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
 
-    public Movement player;
+    private Movement player;
     private Quaternion fixedRotation;
     private Vector3 distance;
 	// Use this for initialization
