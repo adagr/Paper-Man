@@ -9,11 +9,13 @@ public class Jump : MonoBehaviour {
     private float height, jumptimer;
     public float jumptime = 1;
     private bool jumping = false;
+    private Frog frog;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
         height = transform.position.y;
         jumptimer = jumptime;
+        frog = GetComponentInChildren<Frog>();
     }
 	
 	// Update is called once per frame
@@ -22,7 +24,7 @@ public class Jump : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 10, mask))
         {
-            height = hit.collider.gameObject.transform.position.y + hit.collider.bounds.extents.y + 0.6f;
+            height = hit.collider.gameObject.transform.position.y + hit.collider.bounds.extents.y + 0.4f;
         }
         if (jumping)
         {
@@ -44,7 +46,7 @@ public class Jump : MonoBehaviour {
     }
     private void Update()
     {
-        if (Input.GetKeyDown("space") && transform.position.y-height <= 0.1f)
+        if (Input.GetKeyDown("space") && transform.position.y-height <= 0.1f && frog.gameObject.activeSelf)
             jumping = true;
     }
 }
