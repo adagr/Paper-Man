@@ -7,13 +7,11 @@ public class CameraScript : MonoBehaviour {
     public Transform point;
     public float rotationSpeed = 1;
     private Movement player;
-    //private Vector3 distance;
     private float currentRotation;
     private Quaternion rotationTarget;
     // Use this for initialization
     void Start () {
         player = FindObjectOfType<Movement>();
-        //distance = transform.position - player.transform.position;
         rotationTarget = new Quaternion();
         currentRotation = transform.rotation.eulerAngles.y;
         transform.position = player.transform.position;
@@ -21,7 +19,7 @@ public class CameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = Vector3.Lerp(transform.position, player.transform.position/* + distance*/, Time.deltaTime*2);
+        transform.position = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime*2);
         /*if (Input.GetKeyDown("z"))
             transform.RotateAround(point.position, new Vector3(0, 1,0), 90);
         if (Input.GetKeyDown("c"))
