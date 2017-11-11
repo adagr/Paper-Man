@@ -27,6 +27,7 @@ ModelImporter:
     100038: Box002_33
     100040: Box002_34
     100042: Box002_36
+    100044: BOOK_LABEL_8
     400000: BOOK_LABEL
     400002: BOOK_LABEL_1
     400004: BOOK_LABEL_2
@@ -49,6 +50,7 @@ ModelImporter:
     400038: Box002_33
     400040: Box002_34
     400042: Box002_36
+    400044: BOOK_LABEL_8
     2300000: BOOK_LABEL
     2300002: BOOK_LABEL_1
     2300004: BOOK_LABEL_2
@@ -70,6 +72,7 @@ ModelImporter:
     2300036: Box002_33
     2300038: Box002_34
     2300040: Box002_36
+    2300042: BOOK_LABEL_8
     3300000: BOOK_LABEL
     3300002: BOOK_LABEL_1
     3300004: BOOK_LABEL_2
@@ -91,6 +94,7 @@ ModelImporter:
     3300036: Box002_33
     3300038: Box002_34
     3300040: Box002_36
+    3300042: BOOK_LABEL_8
     4300000: BOOK_LABEL_7
     4300002: BOOK_LABEL_6
     4300004: Box002_2
@@ -112,6 +116,29 @@ ModelImporter:
     4300036: Box002_27
     4300038: BOOK_LABEL
     4300040: Box002_25
+    4300042: BOOK_LABEL_8
+    6400000: BOOK_LABEL
+    6400002: BOOK_LABEL_1
+    6400004: BOOK_LABEL_2
+    6400006: BOOK_LABEL_3
+    6400008: BOOK_LABEL_4
+    6400010: BOOK_LABEL_5
+    6400012: BOOK_LABEL_6
+    6400014: BOOK_LABEL_7
+    6400016: BOOK_LABEL_9
+    6400018: Box002
+    6400020: Box002_1
+    6400022: Box002_2
+    6400024: Box002_25
+    6400026: Box002_27
+    6400028: Box002_29
+    6400030: Box002_30
+    6400032: Box002_31
+    6400034: Box002_32
+    6400036: Box002_33
+    6400038: Box002_34
+    6400040: Box002_36
+    6400042: BOOK_LABEL_8
     9500000: //RootNode
   externalObjects:
   - first:
@@ -170,7 +197,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
