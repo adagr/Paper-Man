@@ -235,25 +235,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114103476929078080, guid: 8b4b1ba1a8f78784abced0d41bdafcf3,
+    - target: {fileID: 136644886971965108, guid: 8b4b1ba1a8f78784abced0d41bdafcf3,
         type: 2}
-      propertyPath: speed
+      propertyPath: m_Height
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114548609088712970, guid: 8b4b1ba1a8f78784abced0d41bdafcf3,
-        type: 2}
-      propertyPath: jumptime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114548609088712970, guid: 8b4b1ba1a8f78784abced0d41bdafcf3,
-        type: 2}
-      propertyPath: jumpPower
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 114548609088712970, guid: 8b4b1ba1a8f78784abced0d41bdafcf3,
-        type: 2}
-      propertyPath: gravity
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b4b1ba1a8f78784abced0d41bdafcf3, type: 2}
@@ -680,6 +665,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4486243755342200, guid: aed05818715bcb34681a08ff9eb87945, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486243755342200, guid: aed05818715bcb34681a08ff9eb87945, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486243755342200, guid: aed05818715bcb34681a08ff9eb87945, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aed05818715bcb34681a08ff9eb87945, type: 2}
   m_IsPrefabParent: 0
@@ -962,6 +959,20 @@ Prefab:
     - target: {fileID: 4329947058174206, guid: 6366552bc1caab94689cf46a2ba4bda1, type: 2}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114013455386052060, guid: 6366552bc1caab94689cf46a2ba4bda1,
+        type: 2}
+      propertyPath: windPower
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329947058174206, guid: 6366552bc1caab94689cf46a2ba4bda1, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.5801996
+      objectReference: {fileID: 0}
+    - target: {fileID: 23448004335194274, guid: 6366552bc1caab94689cf46a2ba4bda1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6366552bc1caab94689cf46a2ba4bda1, type: 2}
