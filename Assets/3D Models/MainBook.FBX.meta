@@ -1,22 +1,43 @@
 fileFormatVersion: 2
-guid: 7f7c094992ccebf4db3c714d27cce80a
-timeCreated: 1510401420
+guid: 5aeefd632248faf449e228f1173ade78
+timeCreated: 1510413906
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Plane002
+    100000: Box001
+    100002: Box003
+    100004: //RootNode
+    400000: Box001
+    400002: Box003
+    400004: //RootNode
+    2300000: Box001
+    2300002: Box003
+    2300004: //RootNode
+    3300000: Box001
+    3300002: Box003
+    3300004: //RootNode
+    4300000: Box002
+    4300002: Box001
+    4300004: Box003
+    7400000: Take 001
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #47'
-    second: {fileID: 2100000, guid: 8aaf1ae2632fef74b8e30674e7c9cf2a, type: 2}
+      name: 'Material #27'
+    second: {fileID: 2100000, guid: 7e78ab658b9806a43be18c5a4a364ddb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #3'
+    second: {fileID: 2100000, guid: c2a91795fb5e48646b82fb72289e95c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #4'
+    second: {fileID: 2100000, guid: 6ca4823fea754b345a539bebf75538b5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
