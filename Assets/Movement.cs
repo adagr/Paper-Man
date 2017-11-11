@@ -171,10 +171,7 @@ public class Movement : MonoBehaviour {
             Debug.Log("Enemy");
         }
     }
-    private void OnCollisionStay(Collision collision)
-    {
-         
-    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Wind")
@@ -184,15 +181,16 @@ public class Movement : MonoBehaviour {
             float force = 0;
             if (dir.x != 0)
                 if (Mathf.Abs(currentRotation) == 90 || Mathf.Abs(currentRotation) == 270)
-                    force = 100 / Mathf.Clamp((Mathf.Abs(transform.position.x - wind.point.transform.position.x)),1,10);
+                    force = wind.windPower / Mathf.Clamp((Mathf.Abs(transform.position.x - wind.point.transform.position.x)),0.5f,10);
                 else
-                    force = 20 / Mathf.Clamp((Mathf.Abs(transform.position.x - wind.point.transform.position.x)), 1, 10);
+                    force = 10 / Mathf.Clamp((Mathf.Abs(transform.position.x - wind.point.transform.position.x)), 0.5f, 10);
             if (dir.z != 0)
                 if (Mathf.Abs(currentRotation) == 180 || currentRotation == 0)
-                    force = 100 / Mathf.Clamp((Mathf.Abs(transform.position.z - wind.point.transform.position.z)), 1, 10);
+                    force = wind.windPower / Mathf.Clamp((Mathf.Abs(transform.position.z - wind.point.transform.position.z)), 0.5f, 10);
                 else
-                    force = 20 / Mathf.Clamp((Mathf.Abs(transform.position.z - wind.point.transform.position.z)), 1, 10);
+                    force = 10 / Mathf.Clamp((Mathf.Abs(transform.position.z - wind.point.transform.position.z)), 0.5f, 10);
             rb.AddForce(dir * force);
         }
     }
+
 }
