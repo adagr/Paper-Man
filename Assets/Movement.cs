@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         rotationTarget = new Quaternion();
         animator = GetComponentInChildren<Animator>();
+        animator.speed = 5; 
 	}
 
     private void Update()
