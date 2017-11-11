@@ -39,12 +39,12 @@ public class Jump : MonoBehaviour {
             {
                 rb.AddForce(new Vector3(0, -1, 0) * gravity);
             } else
-                transform.position = new Vector3(transform.position.x, height, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, height, transform.position.z), Time.fixedDeltaTime);
         }
     }
     private void Update()
     {
-        if (Input.GetKeyDown("space") && transform.position.y == height)
+        if (Input.GetKeyDown("space") && transform.position.y-height <= 0.1f)
             jumping = true;
     }
 }
