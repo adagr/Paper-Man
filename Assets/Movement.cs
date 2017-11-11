@@ -10,15 +10,17 @@ public class Movement : MonoBehaviour {
     private Quaternion rotationTarget;
     private int currentRotation = 0;
     private CollisionScript cs;
+    private Rigidbody rb;
 	// Use this for initialization
 	void Start () {
         cc = GetComponent<CharacterController>();
         cs = FindObjectOfType<CollisionScript>();
+        rb = GetComponent<Rigidbody>();
         rotationTarget = new Quaternion();
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
 
         float x = 0;
@@ -44,8 +46,10 @@ public class Movement : MonoBehaviour {
             x += 1;
             z += -1;
         }
-        //cc.Move(new Vector3(Mathf.Clamp(x,-1,1), 0, Mathf.Clamp(z, -1, 1)) * speed * Time.deltaTime);
-        transform.position = new Vector3(transform.position.x + Mathf.Clamp(x, -1, 1) * Time.deltaTime * speed, 0.5f, transform.position.z + Mathf.Clamp(z, -1, 1) * Time.deltaTime * speed);
+
+        rb.velocity = new Vector3(x, 0, z) * speed;
+
+        //rb.MovePosition(new Vector3(transform.position.x + Mathf.Clamp(x, -1, 1) * Time.deltaTime * speed, 0.5f, transform.position.z + Mathf.Clamp(z, -1, 1) * Time.deltaTime * speed));
 
         if (cs.canRotate)
         {
