@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour {
     public float rotationSpeed = 1;
     private CharacterController cc;
     private Quaternion rotationTarget;
-    public int currentRotation = 0, cameraRotation = 0;
+    private int currentRotation = 0, cameraRotation = 0;
     private CollisionScript cs;
     private Rigidbody rb;
     private Animator animator;
@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         rotationTarget = new Quaternion();
         animator = GetComponentInChildren<Animator>();
+        animator.speed = 5; 
 	}
 
     private void Update()
