@@ -11,16 +11,22 @@ public class Movement : MonoBehaviour {
     private int currentRotation = 0, cameraRotation = 0;
     private CollisionScript cs;
     private Rigidbody rb;
-    private Animator animator;
+    private Animator[] animators;
     private int rx = 1, rz = 1, rxa = 1, rza = 1;
+    private Clone[] clones;
+    private int activeClones = 1;
 	// Use this for initialization
 	void Start () {
         cc = GetComponent<CharacterController>();
         cs = FindObjectOfType<CollisionScript>();
         rb = GetComponent<Rigidbody>();
         rotationTarget = new Quaternion();
-        animator = GetComponentInChildren<Animator>();
-        animator.speed = 5; 
+        animators = GetComponentsInChildren<Animator>();
+        foreach (Animator animator in animators)
+            animator.speed = 5;
+        clones = FindObjectsOfType<Clone>();
+        foreach (Clone clone in clones)
+            clone.gameObject.SetActive(false);
 	}
 
     private void Update()
@@ -90,10 +96,12 @@ public class Movement : MonoBehaviour {
 
         rb.velocity = new Vector3(x, 0, z) * speed;
 
+        var walk = false;
         if (x != 0 || z != 0)
-            animator.SetBool("IsWalking", true);
-        else
-            animator.SetBool("IsWalking", false);
+            walk = true;
+        foreach (Animator animator in animators)
+            if (animator.gameObject.activeSelf)
+                animator.SetBool("IsWalking", walk);
 
         //rb.MovePosition(new Vector3(transform.position.x + Mathf.Clamp(x, -1, 1) * Time.deltaTime * speed, 0.5f, transform.position.z + Mathf.Clamp(z, -1, 1) * Time.deltaTime * speed));
 
@@ -108,12 +116,46 @@ public class Movement : MonoBehaviour {
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    public void activateClone()
     {
-        Debug.Log(collision.transform.name);
+        ++activeClones;
+        foreach (Clone clone in clones)
+        {
+            if (activeClones <= clones.Length && clone.name.CompareTo("PaperMan" + activeClones) == 0)
+                clone.gameObject.SetActive(true);
+        }
     }
-    private void OnCollisionExit(Collision collision)
+    public void deactivateClone()
     {
-        Debug.Log("Exit");
+        foreach (Clone clone in clones)
+        {
+            if (activeClones > 1 && clone.name.CompareTo("PaperMan" + activeClones) == 0)
+                clone.gameObject.SetActive(false);
+        }
+        activeClones--;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        /*
+        if (other.tag == "PaperPowerup")
+        {
+            Debug.Log("PaperPowerup");
+            activateClone();
+            Destroy(other.gameObject);
+        }
+        */
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "PaperPowerup")
+        {
+            activateClone();
+            Destroy(collision.gameObject);
+        } else if (collision.gameObject.tag == "Enemy")
+        {
+            deactivateClone();
+            Debug.Log("Enemy");
+        }
     }
 }
