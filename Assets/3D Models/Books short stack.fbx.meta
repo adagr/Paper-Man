@@ -1,45 +1,64 @@
 fileFormatVersion: 2
-guid: 61ff0ff83c18abd40b142bff7a07d5e3
-timeCreated: 1510406553
+guid: 34a59abd5b51f3946bea8f3add515d69
+timeCreated: 1510412148
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Body
-    100002: LeftArm
-    100004: LeftLeg
+    100000: BOOK_LABEL
+    100002: BOOK_LABEL_3
+    100004: BOOK_LABEL_8
     100006: //RootNode
-    100008: RightArm
-    100010: RightLeg
-    400000: Body
-    400002: LeftArm
-    400004: LeftLeg
+    100008: Box002
+    100010: Box002_40
+    100012: Box002_41
+    400000: BOOK_LABEL
+    400002: BOOK_LABEL_3
+    400004: BOOK_LABEL_8
     400006: //RootNode
-    400008: RightArm
-    400010: RightLeg
-    2300000: Body
-    2300002: LeftArm
-    2300004: LeftLeg
-    2300006: RightArm
-    2300008: RightLeg
-    3300000: Body
-    3300002: LeftArm
-    3300004: LeftLeg
-    3300006: RightArm
-    3300008: RightLeg
-    4300000: LeftArm
-    4300002: RightArm
-    4300004: Body
-    4300006: LeftLeg
-    4300008: RightLeg
-    7400000: Take 001
+    400008: Box002
+    400010: Box002_40
+    400012: Box002_41
+    2300000: BOOK_LABEL
+    2300002: BOOK_LABEL_3
+    2300004: BOOK_LABEL_8
+    2300006: Box002
+    2300008: Box002_40
+    2300010: Box002_41
+    3300000: BOOK_LABEL
+    3300002: BOOK_LABEL_3
+    3300004: BOOK_LABEL_8
+    3300006: Box002
+    3300008: Box002_40
+    3300010: Box002_41
+    4300000: Box002
+    4300002: BOOK_LABEL
+    4300004: BOOK_LABEL_8
+    4300006: BOOK_LABEL_3
+    4300008: Box002_41
+    4300010: Box002_40
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #48'
-    second: {fileID: 2100000, guid: 7e78ab658b9806a43be18c5a4a364ddb, type: 2}
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: 6cc403c2c57038340b136da0250ac755, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #37'
+    second: {fileID: 2100000, guid: 7c81e6f0744b35043ad8ddfa60c60f6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #49'
+    second: {fileID: 2100000, guid: d013ede07c0498f4e8cd794c3104a611, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: f583bf6cbadf797419b80368ef1ac354, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
