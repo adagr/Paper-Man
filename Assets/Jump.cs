@@ -9,13 +9,13 @@ public class Jump : MonoBehaviour {
     private float height, jumptimer;
     public float jumptime = 1;
     private bool jumping = false;
-    private Frog frog;
+    public Frog frog;
+    public bool canJump = false;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
         height = transform.position.y;
         jumptimer = jumptime;
-        frog = GetComponentInChildren<Frog>();
     }
 	
 	// Update is called once per frame
@@ -47,6 +47,8 @@ public class Jump : MonoBehaviour {
     private void Update()
     {
         if (Input.GetKeyDown("space") && transform.position.y-height <= 0.1f && frog.gameObject.activeSelf)
+            jumping = true;
+        if (canJump && Input.GetKeyDown("space"))
             jumping = true;
     }
 }
