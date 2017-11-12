@@ -26,13 +26,12 @@ public class Jump : MonoBehaviour {
         {
             height = hit.collider.gameObject.transform.position.y + hit.collider.bounds.extents.y + 0.4f;
         }
+        jumptimer -= Time.deltaTime;
         if (jumping)
         {
-            jumptimer -= Time.deltaTime;
             if (jumptimer < 0)
             {
                 jumping = false;
-                jumptimer = jumptime;
             }
             rb.AddForce(new Vector3(0, 1, 0) * jumpPower * jumptimer);
         } else
@@ -46,8 +45,11 @@ public class Jump : MonoBehaviour {
     }
     private void Update()
     {
-        if (Input.GetKeyDown("space") && transform.position.y-height <= 0.1f && frog.gameObject.activeSelf)
+        if (Input.GetKeyDown("space") && jumptimer < -jumptime && frog && frog.gameObject.activeSelf)
+        {
             jumping = true;
+            jumptimer = jumptime;
+        }
         if (canJump && Input.GetKeyDown("space"))
             jumping = true;
     }
