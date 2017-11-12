@@ -154,7 +154,8 @@ public class Movement : MonoBehaviour {
             if (activeClones+1 <= clones.Length && clone.name.CompareTo("PaperMan" + (activeClones+1)) == 0)
             {
                 activeClones++;
-                clone.gameObject.SetActive(true);
+                if (!isFrog)
+                    clone.gameObject.SetActive(true);
                 col.radius += 0.02f;
                 break;
             }
