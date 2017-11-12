@@ -145,7 +145,7 @@ public class Movement : MonoBehaviour {
             }
         }
     }
-    public void deactivateClone()
+    public void deactivateClone(GameObject enemy)
     {
         if (invincible)
             return;
@@ -157,6 +157,7 @@ public class Movement : MonoBehaviour {
                 col.radius -= 0.02f;
                 activeClones--;
                 invincible = true;
+                AudioSource.PlayClipAtPoint(enemy.GetComponentInParent<Damage>().clip, enemy.transform.position);
                 break;
             }
         }
@@ -170,7 +171,7 @@ public class Movement : MonoBehaviour {
             Destroy(collision.gameObject);
         } else if (collision.gameObject.tag == "Enemy")
         {
-            deactivateClone();
+            deactivateClone(collision.gameObject);
         } else if (collision.gameObject.tag == "FrogPowerup")
         {
             turnIntoFrog();
