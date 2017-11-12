@@ -21,6 +21,9 @@ public class Movement : MonoBehaviour {
     public float invincibleTime = 2;
     private float x = 0, z = 0;
     private Frog frog;
+    public AudioClip deathSound;
+    private GameManager gm;
+    public bool isFrog = false, canBeFrog = false;
     // Use this for initialization
     void Start () {
         cc = GetComponent<CharacterController>();
@@ -37,11 +40,14 @@ public class Movement : MonoBehaviour {
         invincibleTimer = invincibleTime;
         frog = GetComponentInChildren<Frog>();
         frog.gameObject.SetActive(false);
+        gm = FindObjectOfType<GameManager>();
 
     }
 
     private void Update()
     {
+        if (gm.isDead)
+            return;
         if (Input.GetKeyDown("z"))
             cameraRotation = (cameraRotation + 90) % 360;
         else if (Input.GetKeyDown("c"))
@@ -114,11 +120,20 @@ public class Movement : MonoBehaviour {
             if (animator.gameObject.activeSelf)
                 animator.SetBool("IsWalking", walk);
 
+        if (canBeFrog && Input.GetKeyDown("f"))
+        {
+            if (isFrog)
+                turnIntoMan();
+            else
+                turnIntoFrog();
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate ()
     {
+        if (gm.isDead)
+            return;
         if (invincible)
         {
             invincibleTimer -= Time.fixedDeltaTime;
@@ -145,7 +160,7 @@ public class Movement : MonoBehaviour {
             }
         }
     }
-    public void deactivateClone()
+    public void deactivateClone(GameObject enemy)
     {
         if (invincible)
             return;
@@ -157,7 +172,16 @@ public class Movement : MonoBehaviour {
                 col.radius -= 0.02f;
                 activeClones--;
                 invincible = true;
+                AudioSource.PlayClipAtPoint(enemy.GetComponentInParent<Damage>().clip, enemy.transform.position);
                 break;
+            } else if (activeClones == 1)
+            {
+                if (!gm.isDead)
+                {
+                    AudioSource.PlayClipAtPoint(deathSound, transform.position);
+                    Destroy(this.gameObject, 1);
+                    gm.isDead = true;
+                }
             }
         }
     }
@@ -170,9 +194,11 @@ public class Movement : MonoBehaviour {
             Destroy(collision.gameObject);
         } else if (collision.gameObject.tag == "Enemy")
         {
-            deactivateClone();
+            deactivateClone(collision.gameObject);
         } else if (collision.gameObject.tag == "FrogPowerup")
         {
+            canBeFrog = true;
+            isFrog = true;
             turnIntoFrog();
             Destroy(collision.gameObject);
         }
@@ -186,12 +212,12 @@ public class Movement : MonoBehaviour {
             Vector3 dir = other.gameObject.GetComponent<WindScript>().direction;
             float force = 0;
             if (dir.x != 0)
-                if (Mathf.Abs(currentRotation) == 90 || Mathf.Abs(currentRotation) == 270)
+                if (Mathf.Abs(currentRotation) == 90 || Mathf.Abs(currentRotation) == 270 || isFrog)
                     force = wind.windPower / Mathf.Clamp((Mathf.Abs(transform.position.x - wind.point.transform.position.x)),0.5f,10);
                 else
                     force = 10 / Mathf.Clamp((Mathf.Abs(transform.position.x - wind.point.transform.position.x)), 0.5f, 10);
             if (dir.z != 0)
-                if (Mathf.Abs(currentRotation) == 180 || currentRotation == 0)
+                if (Mathf.Abs(currentRotation) == 180 || currentRotation == 0 || isFrog)
                     force = wind.windPower / Mathf.Clamp((Mathf.Abs(transform.position.z - wind.point.transform.position.z)), 0.5f, 10);
                 else
                     force = 10 / Mathf.Clamp((Mathf.Abs(transform.position.z - wind.point.transform.position.z)), 0.5f, 10);
@@ -206,5 +232,20 @@ public class Movement : MonoBehaviour {
             anim.gameObject.SetActive(false);
         }
         frog.gameObject.SetActive(true);
+        isFrog = true;
+    }
+    private void turnIntoMan()
+    {
+        int lives = activeClones;
+        foreach (Animator anim in animators)
+        {
+            if (lives > 0)
+                anim.gameObject.SetActive(true);
+            else
+                break;
+            lives--;
+        }
+        frog.gameObject.SetActive(false);
+        isFrog = false;
     }
 }
