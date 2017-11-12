@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 64011292946805234}
   m_Layer: 0
   m_Name: Box001
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 64343989003979618}
   m_Layer: 0
   m_Name: Box002
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1997109706908978}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 5.010487, y: 2.037, z: -1.0307928}
+  m_LocalPosition: {x: 26.89, y: 0, z: 21.062796}
   m_LocalScale: {x: 0.102703795, y: 0.10270378, z: 0.10270378}
   m_Children:
   - {fileID: 4014673079118558}
@@ -690,7 +690,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -883261259
+  randomSeed: 1931590793
   InitialModule:
     serializedVersion: 3
     enabled: 1
