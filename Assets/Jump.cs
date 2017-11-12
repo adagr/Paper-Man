@@ -51,6 +51,9 @@ public class Jump : MonoBehaviour {
             jumptimer = jumptime;
         }
         if (canJump && Input.GetKeyDown("space"))
+        {
             jumping = true;
+            jumptimer = jumptime;
+        }
     }
 }
