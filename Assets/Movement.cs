@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour {
     private float invincibleTimer;
     public float invincibleTime = 2;
     private float x = 0, z = 0;
+    private Frog frog;
     // Use this for initialization
     void Start () {
         cc = GetComponent<CharacterController>();
@@ -34,6 +35,8 @@ public class Movement : MonoBehaviour {
         foreach (Clone clone in clones)
             clone.gameObject.SetActive(false);
         invincibleTimer = invincibleTime;
+        frog = GetComponentInChildren<Frog>();
+        frog.gameObject.SetActive(false);
 
     }
 
@@ -142,7 +145,7 @@ public class Movement : MonoBehaviour {
             }
         }
     }
-    public void deactivateClone()
+    public void deactivateClone(GameObject enemy)
     {
         if (invincible)
             return;
@@ -154,6 +157,7 @@ public class Movement : MonoBehaviour {
                 col.radius -= 0.02f;
                 activeClones--;
                 invincible = true;
+                AudioSource.PlayClipAtPoint(enemy.GetComponentInParent<Damage>().clip, enemy.transform.position);
                 break;
             }
         }
@@ -167,8 +171,11 @@ public class Movement : MonoBehaviour {
             Destroy(collision.gameObject);
         } else if (collision.gameObject.tag == "Enemy")
         {
-            deactivateClone();
-            Debug.Log("Enemy");
+            deactivateClone(collision.gameObject);
+        } else if (collision.gameObject.tag == "FrogPowerup")
+        {
+            turnIntoFrog();
+            Destroy(collision.gameObject);
         }
     }
 
@@ -193,4 +200,12 @@ public class Movement : MonoBehaviour {
         }
     }
 
+    private void turnIntoFrog()
+    {
+        foreach(Animator anim in animators)
+        {
+            anim.gameObject.SetActive(false);
+        }
+        frog.gameObject.SetActive(true);
+    }
 }

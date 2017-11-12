@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 59a8abc8dc8617f48bab20d4eb20c1e2
-timeCreated: 1510407940
+timeCreated: 1510485739
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -11,6 +11,26 @@ ModelImporter:
     3300000: //RootNode
     4300000: Pen002
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #4'
+    second: {fileID: 2100000, guid: 6ca4823fea754b345a539bebf75538b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #5'
+    second: {fileID: 2100000, guid: b73fbd07bddd3a147a206e06487e0b61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #6'
+    second: {fileID: 2100000, guid: f15535aafe95fc24dbf3f92210de45fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #7'
+    second: {fileID: 2100000, guid: 39cb4ca46bf2d58489f7f15e2ad0fb99, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
