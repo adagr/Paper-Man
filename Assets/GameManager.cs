@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
 		if (isDead)
         {
             if (Input.GetKeyDown("r"))
-                SceneManager.LoadScene("Main");
+                SceneManager.LoadScene(1);
         }
         if (paperMan.isFrog && !playFrog)
         {
@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour {
             source.Play();
             playFrog = false;
         }
+        if (Input.GetKeyDown("escape"))
+            SceneManager.LoadScene(0);
 	}
     
 }
