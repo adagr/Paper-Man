@@ -147,7 +147,7 @@ public class Movement : MonoBehaviour {
         rb.velocity = new Vector3(x, 0, z) * speed;
     }
 
-    public void activateClone()
+    public void activateClone(GameObject powerup)
     {
         foreach (Clone clone in clones)
         {
@@ -157,6 +157,7 @@ public class Movement : MonoBehaviour {
                 if (!isFrog)
                     clone.gameObject.SetActive(true);
                 col.radius += 0.02f;
+                AudioSource.PlayClipAtPoint(powerup.GetComponentInParent<Damage>().clip, powerup.transform.position);
                 break;
             }
         }
@@ -191,7 +192,7 @@ public class Movement : MonoBehaviour {
     {
         if (collision.gameObject.tag == "PaperPowerup")
         {
-            activateClone();
+            activateClone(collision.gameObject);
             Destroy(collision.gameObject);
         } else if (collision.gameObject.tag == "Enemy")
         {

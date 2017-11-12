@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4329015231059272}
   - component: {fileID: 95363592121045736}
   - component: {fileID: 65794443866789494}
+  - component: {fileID: 114217092348924148}
   m_Layer: 0
   m_Name: PaperSheet
   m_TagString: PaperPowerup
@@ -142,3 +143,15 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114217092348924148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265855620658084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d06f68a6a40a1d498c78dd52c2dce10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 4951dd180d0ff78469ff4b9f0a7e3a55, type: 3}

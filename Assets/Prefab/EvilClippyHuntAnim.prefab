@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 95482252094625970}
   - component: {fileID: 64547896563672270}
   - component: {fileID: 114358043477897440}
+  - component: {fileID: 114261415225964880}
   m_Layer: 0
   m_Name: EvilClippyHuntAnim
   m_TagString: Enemy
@@ -568,6 +569,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114261415225964880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093292822280680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d06f68a6a40a1d498c78dd52c2dce10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 62ad31bbdb9fc6045982b5400f9919eb, type: 3}
 --- !u!114 &114358043477897440
 MonoBehaviour:
   m_ObjectHideFlags: 1
