@@ -3210,7 +3210,7 @@ MonoBehaviour:
   currentRotation: 0
   cameraRotation: 0
   invincibleTime: 2
-  deathSound: {fileID: 8300000, guid: 1fcc4d8204b53884e8163d90019b0b0f, type: 3}
+  deathSound: {fileID: 8300000, guid: 3b76bca6de2d8ce4ca3cd75341318a6d, type: 3}
   isFrog: 0
   canBeFrog: 0
 --- !u!114 &114334507431395798

@@ -23,7 +23,7 @@ public class Patrol : MonoBehaviour
         Vector3 distance = target - transform.position;
         transform.position += distance.normalized * Time.deltaTime * speed;
         Quaternion q = new Quaternion();
-        q.eulerAngles = new Vector3(transform.rotation.x,(target==a)?0:180,transform.rotation.z);
+        q.eulerAngles = new Vector3(-90,(target==a)?0:180,-89);
         transform.rotation = Quaternion.Lerp(transform.rotation, q, Time.deltaTime * 5);
         if (distance.magnitude < 0.1)
         {
@@ -32,5 +32,6 @@ public class Patrol : MonoBehaviour
             else
                 target = a;
         }
+        Debug.Log(transform.rotation.x*Mathf.Rad2Deg+ " " + transform.rotation.z);
     }
 }
