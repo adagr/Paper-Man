@@ -1242,6 +1242,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!81 &2016111131
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2016111124}
+  m_Enabled: 1
 --- !u!1001 &2040900841
 Prefab:
   m_ObjectHideFlags: 0
@@ -1293,6 +1300,18 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 4.139521
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114103476929078080, guid: 8b4b1ba1a8f78784abced0d41bdafcf3,
+        type: 2}
+      propertyPath: ps
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114103476929078080, guid: 8b4b1ba1a8f78784abced0d41bdafcf3,
+        type: 2}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 198292230729673604, guid: 59a30e8a7f0ee4e47ad3bf45b135d9fd,
+        type: 2}
+    m_RemovedComponents:
+    - {fileID: 81662389425662856, guid: 8b4b1ba1a8f78784abced0d41bdafcf3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8b4b1ba1a8f78784abced0d41bdafcf3, type: 2}
   m_IsPrefabParent: 0

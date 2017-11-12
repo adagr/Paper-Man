@@ -213,7 +213,6 @@ GameObject:
   - component: {fileID: 114103476929078080}
   - component: {fileID: 136644886971965108}
   - component: {fileID: 114548609088712970}
-  - component: {fileID: 81662389425662856}
   m_Layer: 0
   m_Name: Paper Man
   m_TagString: Untagged
@@ -917,7 +916,7 @@ Transform:
   m_GameObject: {fileID: 1577555344361940}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0.045650892, y: -0.50939, z: -2.6250594}
-  m_LocalScale: {x: 259.69717, y: 2.8855245, z: 2.9720442}
+  m_LocalScale: {x: 361.71133, y: 4.019015, z: 4.139521}
   m_Children:
   - {fileID: 4560059365717370}
   m_Father: {fileID: 4546227470776582}
@@ -3028,13 +3027,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0.86800885, z: 50}
   m_Center: {x: 0, y: 0.065995574, z: 0}
---- !u!81 &81662389425662856
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1177520415150466}
-  m_Enabled: 1
 --- !u!95 &95014384779699362
 Animator:
   serializedVersion: 3
@@ -3213,6 +3205,7 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 3b76bca6de2d8ce4ca3cd75341318a6d, type: 3}
   isFrog: 0
   canBeFrog: 0
+  blood: {fileID: 198292230729673604, guid: 59a30e8a7f0ee4e47ad3bf45b135d9fd, type: 2}
 --- !u!114 &114334507431395798
 MonoBehaviour:
   m_ObjectHideFlags: 1

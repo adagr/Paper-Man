@@ -24,6 +24,7 @@ public class Movement : MonoBehaviour {
     public AudioClip deathSound;
     private GameManager gm;
     public bool isFrog = false, canBeFrog = false;
+    public ParticleSystem blood;
     // Use this for initialization
     void Start () {
         cc = GetComponent<CharacterController>();
@@ -181,7 +182,8 @@ public class Movement : MonoBehaviour {
                 if (!gm.isDead)
                 {
                     AudioSource.PlayClipAtPoint(deathSound, transform.position);
-                    Destroy(this.gameObject, 1);
+                    Destroy(this.gameObject, 0);
+                    Instantiate(blood, transform.position, new Quaternion());
                     gm.isDead = true;
                 }
             }
