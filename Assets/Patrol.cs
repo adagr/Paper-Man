@@ -25,7 +25,7 @@ public class Patrol : MonoBehaviour
         Quaternion q = new Quaternion();
         q.eulerAngles = new Vector3(transform.rotation.eulerAngles.x, (target==a)?0:180, -89);
         //transform.rotation = Quaternion.Lerp(transform.rotation, q, Time.deltaTime * 5);
-        transform.LookAt(target);
+        //transform.LookAt(target);
         if (distance.magnitude < 0.1)
         {
             if (target == a)
