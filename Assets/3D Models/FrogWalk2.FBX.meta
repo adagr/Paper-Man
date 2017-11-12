@@ -1,21 +1,30 @@
 fileFormatVersion: 2
-guid: ae76ab62a6f5f93429bce7de8afab314
+guid: f5430196cce9a214096ad3e7faf285fc
+timeCreated: 1510440393
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Plane002
+    100004: Plane003
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Box001
-    6400000: //RootNode
+    400002: Plane002
+    400004: Plane003
+    2300000: Plane002
+    2300002: Plane003
+    3300000: Plane002
+    3300002: Plane003
+    4300000: Plane002
+    4300002: Plane003
+    7400000: Take 001
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #3'
-    second: {fileID: 2100000, guid: c2a91795fb5e48646b82fb72289e95c3, type: 2}
+      name: 'Material #2'
+    second: {fileID: 2100000, guid: 7e78ab658b9806a43be18c5a4a364ddb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -41,13 +50,41 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
