@@ -206,6 +206,11 @@ public class Movement : MonoBehaviour {
             turnIntoFrog();
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.tag == "Boss")
+        {
+            Instantiate(blood, collision.gameObject.transform.position, new Quaternion());
+            Destroy(collision.gameObject);
+        }
     }
 
     private void OnTriggerStay(Collider other)

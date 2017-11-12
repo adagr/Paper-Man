@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Wind
   - FrogPowerup
+  - Boss
   layers:
   - Default
   - TransparentFX
