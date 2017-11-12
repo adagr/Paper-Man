@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour {
     private float invincibleTimer;
     public float invincibleTime = 2;
     private float x = 0, z = 0;
+    private Frog frog;
     // Use this for initialization
     void Start () {
         cc = GetComponent<CharacterController>();
@@ -34,6 +35,8 @@ public class Movement : MonoBehaviour {
         foreach (Clone clone in clones)
             clone.gameObject.SetActive(false);
         invincibleTimer = invincibleTime;
+        frog = GetComponentInChildren<Frog>();
+        frog.gameObject.SetActive(false);
 
     }
 
@@ -168,7 +171,10 @@ public class Movement : MonoBehaviour {
         } else if (collision.gameObject.tag == "Enemy")
         {
             deactivateClone();
-            Debug.Log("Enemy");
+        } else if (collision.gameObject.tag == "FrogPowerup")
+        {
+            turnIntoFrog();
+            Destroy(collision.gameObject);
         }
     }
 
@@ -193,4 +199,12 @@ public class Movement : MonoBehaviour {
         }
     }
 
+    private void turnIntoFrog()
+    {
+        foreach(Animator anim in animators)
+        {
+            anim.gameObject.SetActive(false);
+        }
+        frog.gameObject.SetActive(true);
+    }
 }
